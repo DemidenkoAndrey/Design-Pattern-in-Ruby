@@ -27,7 +27,7 @@
 
 ##Design Patterns
 
-###Template Method
+###[Template Method](template_method)
 
 ######behavioral design pattern
 
