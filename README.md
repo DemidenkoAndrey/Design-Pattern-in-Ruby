@@ -23,4 +23,5 @@
 
 5. You ain't gonna need it (Russ Olsen's addition)
    Don't implement features or design in flexibility that you don't immediately need because you will probably never need it.
-------------------
+
+***
