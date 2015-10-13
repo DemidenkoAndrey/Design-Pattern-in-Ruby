@@ -27,7 +27,7 @@
 
 ##Design Patterns
 
-###Template Method
+###[Template Method](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/template_method)
 
 ######(behavioral design pattern)
 
