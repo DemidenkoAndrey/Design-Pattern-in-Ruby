@@ -27,13 +27,13 @@
 
 ##Design Patterns
 
-###[Template Method](template_method)
+###Template Method
 
-######behavioral design pattern
+######(behavioral design pattern)
 
-1. Create a **skeletal class** with methods that are common between algorithms.
+1. Create a skeletal class with methods that are common between algorithms.
 
-2. Create a **subclass** for each algorithm and override the common methods from the skeletal class.
+2. Create a subclass for each algorithm and override the common methods from the skeletal class.
 
 Disadvantages:
 
