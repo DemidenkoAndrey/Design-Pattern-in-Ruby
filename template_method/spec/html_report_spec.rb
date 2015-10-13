@@ -3,33 +3,33 @@ describe Report do
 
   let(:report) { HTMLReport.new }
 
-  it "method 'output_start' return '<html>'" do
-    expect(report.output_start).to eq("<html>")
+  it "method 'output_start' puts '<html>'" do
+    expect { report.output_start}.to output("<html>\n").to_stdout
   end
 
-  it "method 'output_title' return head" do
-    head = <<-HTML_HEAD
+  it "method 'output_title' puts head" do
+    head = <<-HEAD
   <head>
     <title>MonthlyReport</title>
   </head>
-    HTML_HEAD
-    expect(report.output_title).to eq(head.chomp)
+    HEAD
+    expect { report.output_title}.to output(head).to_stdout
   end
 
-  it "method 'output_body_start' return '<body>'" do
-    expect(report.output_body_start).to eq("<body>")
+  it "method 'output_body_start' puts '<body>'" do
+    expect { report.output_body_start}.to output("<body>\n").to_stdout
   end
 
-  it "method 'output_line' return '<p>hello</p>'" do
-    expect(report.output_line("hello")).to eq("  <p>hello</p>")
+  it "method 'output_line' puts '  <p>hello</p>'" do
+    expect { report.output_line("hello")}.to output("  <p>hello</p>\n").to_stdout
   end
 
-  it "method 'output_body_end' return '</body>'" do
-    expect(report.output_body_end).to eq("</body>")
+  it "method 'output_body_end' puts '</body>'" do
+    expect { report.output_body_end }.to output("</body>\n").to_stdout
   end
 
-  it "method 'output_end' return '</html>'" do
-    expect(report.output_end).to eq("</html>")
+  it "method 'output_end' puts '</html>'" do
+    expect { report.output_end }.to output("</html>\n").to_stdout
   end
 
   it "method 'output_report' raise error" do
@@ -44,6 +44,6 @@ describe Report do
 </body>
 </html>
     HTML_REPORT
-    expect(report.output_report).to eq(result.chomp)
+    expect { report.output_report }.to output(result).to_stdout
   end
 end
