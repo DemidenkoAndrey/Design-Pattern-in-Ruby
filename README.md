@@ -1,11 +1,10 @@
 #Disign Patterns in Ruby
-#Five Main Points
+##Five Main Points
 
 1. Separate out the things that change from thouse that stay the same.
 
     - promotes DRY code
     - improves maintainability
-
 
 2. Program to an interface, not an implementation.
 
@@ -25,3 +24,17 @@
    Don't implement features or design in flexibility that you don't immediately need because you will probably never need it.
 
 ***
+
+##Design Patterns
+
+###Template Method
+
+######behavioral design pattern
+
+1. Create a **skeletal class** with methods that are common between algorithms.
+
+2. Create a **subclass** for each algorithm and override the common methods from the skeletal class.
+
+Disadvantages:
+
+  - no runtime flexibility
