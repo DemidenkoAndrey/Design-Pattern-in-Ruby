@@ -5,12 +5,10 @@ class Report
   end
 
   def output_report
-    output_start
-    output_title
-    output_body_start
-    @text.each { |line| output_line(line) }
-    output_body_end
-    output_end
+    body = @text.map { |line| output_line(line) }.join("\n")
+    [output_start, output_title, output_body_start, body,
+     output_body_end, output_end
+    ].join("\n")
   end
 
   def output_start
