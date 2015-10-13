@@ -6,7 +6,7 @@ class Report
 
   def output_report
     output_start
-    output_title(@title)
+    output_title
     output_body_start
     @text.each { |line| output_line(line) }
     output_body_end
@@ -16,7 +16,7 @@ class Report
   def output_start
   end
 
-  def output_head
+  def output_title
     output_line(@title)
   end
 
