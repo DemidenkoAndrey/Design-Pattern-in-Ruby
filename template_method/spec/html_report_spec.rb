@@ -1,10 +1,10 @@
 require_relative '../html_report'
-describe Report do
+describe HTMLReport do
 
-  let(:report) { HTMLReport.new }
+  let(:html_report) { HTMLReport.new }
 
   it "method 'output_start' puts '<html>'" do
-    expect { report.output_start}.to output("<html>\n").to_stdout
+    expect { html_report.output_start}.to output("<html>\n").to_stdout
   end
 
   it "method 'output_title' puts head" do
@@ -13,23 +13,23 @@ describe Report do
     <title>MonthlyReport</title>
   </head>
     HEAD
-    expect { report.output_title}.to output(head).to_stdout
+    expect { html_report.output_title}.to output(head).to_stdout
   end
 
   it "method 'output_body_start' puts '<body>'" do
-    expect { report.output_body_start}.to output("<body>\n").to_stdout
+    expect { html_report.output_body_start}.to output("<body>\n").to_stdout
   end
 
   it "method 'output_line' puts '  <p>hello</p>'" do
-    expect { report.output_line("hello")}.to output("  <p>hello</p>\n").to_stdout
+    expect { html_report.output_line("hello")}.to output("  <p>hello</p>\n").to_stdout
   end
 
   it "method 'output_body_end' puts '</body>'" do
-    expect { report.output_body_end }.to output("</body>\n").to_stdout
+    expect { html_report.output_body_end }.to output("</body>\n").to_stdout
   end
 
   it "method 'output_end' puts '</html>'" do
-    expect { report.output_end }.to output("</html>\n").to_stdout
+    expect { html_report.output_end }.to output("</html>\n").to_stdout
   end
 
   it "method 'output_report' raise error" do
@@ -44,6 +44,6 @@ describe Report do
 </body>
 </html>
     HTML_REPORT
-    expect { report.output_report }.to output(result).to_stdout
+    expect { html_report.output_report }.to output(result).to_stdout
   end
 end
