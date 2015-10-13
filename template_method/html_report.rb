@@ -1,31 +1,28 @@
 require_relative 'report'
 class HTMLReport < Report
   def output_start
-    "<html>"
+    puts "<html>"
   end
 
   def output_title
-    head = <<-HTML_HEAD
-  <head>
-    <title>#{@title}</title>
-  </head>
-    HTML_HEAD
-    head.chomp
+    puts "  <head>"
+    puts "    <title>#{@title}</title>"
+    puts "  </head>"
   end
 
   def output_body_start
-    "<body>"
+    puts "<body>"
   end
 
   def output_line(line)
-    "  <p>#{line}</p>"
+    puts "  <p>#{line}</p>"
   end
 
   def output_body_end
-    "</body>"
+    puts "</body>"
   end
 
   def output_end
-    "</html>"
+    puts "</html>"
   end
 end
