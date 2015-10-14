@@ -1,4 +1,4 @@
-require_relative '../html_report'
+require_relative "../html_report"
 describe HTMLReport do
 
   let(:html_report) { HTMLReport.new }

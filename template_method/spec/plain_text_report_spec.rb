@@ -1,4 +1,4 @@
-require_relative '../plain_text_report'
+require_relative "../plain_text_report"
 describe PlainTextReport do
 
   let(:report) { PlainTextReport.new }

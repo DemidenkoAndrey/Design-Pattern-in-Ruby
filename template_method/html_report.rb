@@ -1,4 +1,4 @@
-require_relative 'report'
+require_relative "report"
 class HTMLReport < Report
   def output_start
     puts "<html>"

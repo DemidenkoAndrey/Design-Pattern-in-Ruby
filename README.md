@@ -29,12 +29,35 @@
 
 ###[Template Method](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/template_method)
 
-######(behavioral design pattern)
+######behavioral design pattern
 
-1. Create a skeletal class with methods that are common between algorithms.
+1. Create a **skeletal class** with methods that are common between algorithms.
 
-2. Create a subclass for each algorithm and override the common methods from the skeletal class.
+2. Create a **subclass** for each algorithm and override the common methods from the skeletal class.
 
 Disadvantages:
 
   - no runtime flexibility
+
+***
+
+###[Strategy](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/strategy)
+
+######behavioral design pattern
+
+The basic idea is to **delegate tasks to encapsulated algorithms which are interchangable at runtime**.
+
+In the Strategy pattern we have an object (the context) that is trying to get something done. But to get that thing done, we need to supply the context with a second object, called the strategy, that helps get the thing done.
+
+1. Define a family of objects which all do the same thing (ex: format output, generate graphics etc.).
+2. Ensure the family of objects share the same interface so that they are interchangable.
+There are two strategies to passing data from the context object to the strategy object. We can pass the data as paramaters when the strategy is called, or we can pass the context object as the single parameter.
+
+If the strategies are very simple and have only one method, we can even use code blocks for our algorithms and simply use *block.call*. However, if multiple methods are needed, the strategies must be structured as separate classes.
+
+Advantages:
+
+- algorithms are interchangable at runtime
+- promotes modularity
+
+***

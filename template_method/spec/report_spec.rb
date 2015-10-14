@@ -1,4 +1,4 @@
-require_relative '../report'
+require_relative "../report"
 describe Report do
 
   let(:report) { Report.new }
