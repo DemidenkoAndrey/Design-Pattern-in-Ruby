@@ -4,8 +4,8 @@ require_relative "../report"
 
 describe Report do
 
-  let (:report_html) { Report.new(HTMLFormatter) }
-  let (:report_plain) { Report.new(PlainTextFormatter) }
+  let (:report_html) { Report.new(&HTML_FORMATTER) }
+  let (:report_plain) { Report.new(&PLAIN_TEXT_FORMATTER) }
 
   it "report_plain method 'output_report' puts report in plain format " do
     result = <<-PLAIN_FORMAT
