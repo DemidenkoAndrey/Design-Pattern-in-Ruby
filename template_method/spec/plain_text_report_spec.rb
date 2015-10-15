@@ -27,7 +27,7 @@ describe PlainTextReport do
     expect(report.output_start).to eq(nil)
   end
 
-  it "method 'output_report' raise error" do
+  it "method 'output_report' puts report in plain text" do
     result = <<-PLAINT_TEXT
 **** MonthlyReport ****
 

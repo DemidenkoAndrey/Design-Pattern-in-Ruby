@@ -32,7 +32,7 @@ describe HTMLReport do
     expect { html_report.output_end }.to output("</html>\n").to_stdout
   end
 
-  it "method 'output_report' raise error" do
+  it "method 'output_report' puts report in html format" do
     result = <<-HTML_REPORT
 <html>
   <head>
