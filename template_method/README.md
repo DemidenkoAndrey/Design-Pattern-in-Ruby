@@ -15,7 +15,7 @@
 >The Template Method pattern implements the Protected Variations GRASP principle, like the Adapter pattern does. The difference is that Adapter gives the same interface for several operations, while Template Method does so only for one.
 
 ##Class diagram for the Template Method pattern
-[logo]: https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/blob/master/template_method/class_diagram_template_method.PNG "Class diagram for ther Template Method pattern"
+[logo]: https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/blob/master/template_method/class_diagram_template_method.png "Class diagram for the Template Method pattern"
 ![alt text][logo]
 
 ##Templates in the Wild
