@@ -78,7 +78,7 @@ In the default implementation, the notification sent to the observer doesn't spe
 
 Another approach would be the *push* method where the notification includes other attributes which provide the Observer with additional information like the examples below.
 
-```
+```ruby
 
 observer.update(self, :salary_changed)
 observer.update(self, :salary_changed, old_salary, new_salary)
