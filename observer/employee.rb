@@ -1,4 +1,3 @@
-require_relative 'subject'
 class Employee
   include Subject
   attr_reader :name
