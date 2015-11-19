@@ -30,4 +30,14 @@ really, really well.
     HTML_FORMATTER
     expect { report_html.output_report }.to output(result).to_stdout
   end
+
+  it "report_html  can change formatter at runtime" do
+    report_html.formatter = PLAIN_TEXT_FORMATTER
+    result = <<-PLAIN_FORMAT
+***** Monthly Report *****
+Things are going
+really, really well.
+  PLAIN_FORMAT
+    expect { report_html.output_report }.to output(result).to_stdout
+  end
 end
