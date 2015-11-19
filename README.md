@@ -62,7 +62,7 @@ Advantages:
 
 ***
 
-###[Strategy](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/observer)
+###[Observer](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/observer)
 
 ######behavioral design pattern
 
