@@ -1,6 +1,6 @@
 require_relative '../employee'
-require_relative '../payroll'
-require_relative '../tax_man'
+require_relative '../../payroll'
+require_relative '../../tax_man'
 
 describe 'Observer' do
   let(:employee) { Employee.new('Fred', 'Crane Operator', 30000.0) }
