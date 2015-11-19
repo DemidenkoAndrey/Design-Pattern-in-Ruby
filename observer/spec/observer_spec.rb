@@ -19,6 +19,10 @@ describe 'Observer' do
     expect(employee.respond_to?(:notify_observers)).to be true
   end
 
+  it 'employee has method notify_observers' do
+    expect(employee.respond_to?(:count_observers)).to be true
+  end
+
   it 'nothing output via, when list of observers is empty' do
     expect { employee.notify_observers }.to output("").to_stdout
   end
