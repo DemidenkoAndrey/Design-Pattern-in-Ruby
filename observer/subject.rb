@@ -16,4 +16,8 @@ module Subject
       observer.update(self)
     end
   end
+
+  def count_observers
+    @observers.count
+  end
 end
