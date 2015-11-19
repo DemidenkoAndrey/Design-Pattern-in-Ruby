@@ -61,3 +61,28 @@ Advantages:
 - promotes modularity
 
 ***
+
+###[Strategy](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/observer)
+
+######behavioral design pattern
+
+The Observer pattern (also known as publish/subscribe) provides a simple mechanism for one object to inform a set of interested third-party objects when its state changes.
+
+An object, called the **subject**, maintains a list of its dependents, called **observers**, and notifies them automatically of any state changes, usually by calling one of their methods.
+
+The Ruby Standard Library includes an [Observable](http://ruby-doc.org/stdlib-2.2.3/libdoc/observer/rdoc/Observable.html) module that implements this pattern.
+
+####Push and Pull
+
+In the default implementation, the notification sent to the observer doesn't specify which of the Subjects attributes has changed. To find out which attribute has changed, the Observer has to check the Subjects attributes, this is the *pull* method.
+
+Another approach would be the *push* method where the notification includes other attributes which provide the Observer with additional information like the examples below.
+
+```
+
+observer.update(self, :salary_changed)
+observer.update(self, :salary_changed, old_salary, new_salary)
+
+```
+
+An observer may only need to know when a specific attribute of the subject changes. The simple implementation would notify the observer when any attribute changes.
