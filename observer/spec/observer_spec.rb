@@ -23,12 +23,12 @@ describe 'Observer' do
   end
 
   it 'init observers count eq 0' do
-    expect(employee.instance_variable_get(:@observers).count).to eq(0)
+    expect(employee.count_observers).to eq(0)
   end
 
   it 'add observer to observers via add_observer' do
     employee.add_observer(tax_man)
-    expect(employee.instance_variable_get(:@observers).count).to eq(1)
+    expect(employee.count_observers).to eq(1)
   end
 
   it 'notify observer, when change salary' do
@@ -41,7 +41,7 @@ describe 'Observer' do
     employee.add_observer(tax_man)
     employee.add_observer(payroll)
     employee.delete_observer(tax_man)
-    expect(employee.instance_variable_get(:@observers).count).to eq(1)
+    expect(employee.count_observers).to eq(1)
   end
 
   it 'notify all observers, when change salary' do
