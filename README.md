@@ -86,3 +86,15 @@ observer.update(self, :salary_changed, old_salary, new_salary)
 ```
 
 An observer may only need to know when a specific attribute of the subject changes. The simple implementation would notify the observer when any attribute changes.
+
+***
+
+###[Composite](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/composite)
+
+######structural design pattern
+
+The composite design pattern(*the sum acts like one of the parts*) is a structural pattern used to represent objects that have a **hierarchical tree structure**. It allows for the uniform treatment of both individual leaf nodes and of branches composed of many nodes.
+
+The implementation in the book is inflexible and doesn't allow Tasks to be dynamically created and doesn't allow dynamically splitting tasks into subtasks. To subdivide a task into multiple subtasks, the class of the leaf Task must be changed to a CompositeTask before children can be added. A better solution would be to use a single Node class for both leaves and internal nodes. With this implementation, leaf nodes can have children added without the need to change it's class.
+
+For a specific implementation, you can simply inherit from the Node class and extend it with any additional functions you may need.
