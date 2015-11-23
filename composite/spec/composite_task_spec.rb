@@ -90,4 +90,17 @@ describe CompositeTask do
     composite.remove_sub_task(mix_task)
     expect(mix_task.parent).to be nil
   end
+
+  it 'return task via []' do
+    composite << mix_task
+    composite << frost_task
+    expect(composite[1]).to eq frost_task
+  end
+
+  it 'can set task via []' do
+    composite << mix_task
+    composite << frost_task
+    composite[0] = frost_task
+    expect(composite[1]).to eq frost_task
+  end
 end
