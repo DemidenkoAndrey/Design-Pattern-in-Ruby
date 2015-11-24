@@ -98,3 +98,37 @@ The composite design pattern(*the sum acts like one of the parts*) is a structur
 The implementation in the book is inflexible and doesn't allow Tasks to be dynamically created and doesn't allow dynamically splitting tasks into subtasks. To subdivide a task into multiple subtasks, the class of the leaf Task must be changed to a CompositeTask before children can be added. A better solution would be to use a single Node class for both leaves and internal nodes. With this implementation, leaf nodes can have children added without the need to change it's class.
 
 For a specific implementation, you can simply inherit from the Node class and extend it with any additional functions you may need.
+
+***
+
+###[Iterator](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/iterator)
+
+######behavioral design pattern
+
+Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation
+
+In other words, an Iterator provides the outside world with a sort of movable
+pointer into the objects stored inside an otherwise opaque aggregate object.
+
+####External iterator
+
+The iteration logic is contained in a separate class. The iteration class can be generalized to handle multiple object types as long as they allow indexing.
+
+External iterator require the additional class to do the actual iterating, but they do allow for greater flexibility because you can control the iteration, which elements are iterated over and in what order.
+
+####Internal iterator
+
+All the iterating logic occurs inside the aggregate object. Use a code block to pass your logic into the aggregate which then calls the block for each of it's elements.
+
+```ruby
+
+array = [10, 20, 30]
+array.each {|element| puts("The element is #{element}")}
+
+```
+
+####Enumerable Module
+
+Ruby includes an [Enumerator module](http://ruby-doc.org/core/Enumerable.html)
+
+>The Enumerable mixin provides collection classes with several traversal and searching methods, and with the ability to sort. The class must provide a method each, which yields successive members of the collection. If Enumerable#max, #min, or #sort is used, the objects in the collection must also implement a meaningful <=> operator, as these methods rely on an ordering between members of the collection.
