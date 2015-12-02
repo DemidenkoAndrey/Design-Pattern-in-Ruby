@@ -187,3 +187,20 @@ Similar to undo, a database engine or software installer may keep a list of oper
 Often a wizard presents several pages of configuration for a single action that happens only when the user clicks the "Finish" button on the last page. In these cases, a natural way to separate user interface code from application code is to implement the wizard using a command object. The command object is created when the wizard is first displayed. Each wizard page stores its GUI changes in the command object, so the object is populated as the user progresses. "Finish" simply triggers a call to execute(). This way, the command class will work.
 
 ***
+
+###[Adapter](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/adapter)
+
+######structural design pattern
+
+Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces.
+
+Ruby allows for classes to be modified at runtime. Consequently, rather than create an adapter to modify a classes API, we can simply modify the class at runtime to add or alter methods.
+
+Alternatively, Ruby also allows the runtime modification of individual instances.
+
+Modifying instances or classes at run-time is advisable only when:
+
+- The modifications are simple
+- You understand the class you're modifying well and are sure your changes wont break things.
+
+If either of these points aren't true, it's probably better to create a separate adapter.
