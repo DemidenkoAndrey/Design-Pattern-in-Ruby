@@ -4,15 +4,15 @@ describe ArrayIterator do
   let(:array_iterator) { ArrayIterator.new([1,4,6,'hello', 'matz']) }
 
   it 'string_iterator has method has_next'  do
-    expect(string_iterator.respond_to?(:has_next?)).to be true
+    expect(string_iterator).to respond_to(:has_next?)
   end
 
   it 'string_iterator has method item'  do
-    expect(string_iterator.respond_to?(:item)).to be true
+    expect(string_iterator).to respond_to(:item)
   end
 
   it 'string_iterator has method next_item'  do
-    expect(string_iterator.respond_to?(:next_item)).to be true
+    expect(string_iterator).to respond_to(:next_item)
   end
 
   it 'string_iterator return true if current index < size' do

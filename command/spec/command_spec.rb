@@ -4,15 +4,15 @@ describe Command do
   let(:command) { Command.new('CommandDescription') }
 
   it 'has method execute' do
-    expect(command.respond_to?(:execute)).to be true
+    expect(command).to respond_to(:execute)
   end
 
   it 'has method description' do
-    expect(command.respond_to?(:description)).to be true
+    expect(command).to respond_to(:description)
   end
 
   it 'has method unexecute' do
-    expect(command.respond_to?(:unexecute)).to be true
+    expect(command).to respond_to(:unexecute)
   end
 
   it 'return description' do

@@ -8,11 +8,11 @@ describe Portfolio do
   let(:portfolio) { Portfolio.new }
 
   it "has method each" do
-    expect(portfolio.respond_to?(:each)).to be true
+    expect(portfolio).to respond_to(:each)
   end
 
   it "has method add_account" do
-    expect(portfolio.respond_to?(:add_account)).to be true
+    expect(portfolio).to respond_to(:add_account)
   end
 
   it "method add_account add new account to array" do

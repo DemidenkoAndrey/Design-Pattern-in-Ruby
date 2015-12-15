@@ -8,19 +8,19 @@ describe 'Adapter' do
   let(:string_io_adapter) { StringIOAdapter.new("Hello World") }
 
   it 'encrypt has method encrypt' do
-    expect(encrypter.respond_to?(:encrypt)).to be true
+    expect(encrypter).to respond_to(:encrypt)
   end
 
   it 'decrypt has method decrypt' do
-    expect(decrypter.respond_to?(:decrypt)).to be true
+    expect(decrypter).to respond_to(:decrypt)
   end
 
   it 'string_io_adapter has method getbyte' do
-    expect(string_io_adapter.respond_to?(:getbyte)).to be true
+    expect(string_io_adapter).to respond_to(:getbyte)
   end
 
   it 'string_io_adapter has method eof?' do
-    expect(string_io_adapter.respond_to?(:eof?)).to be true
+    expect(string_io_adapter).to respond_to(:eof?)
   end
 
   it 'encrypt read from file and write to file' do

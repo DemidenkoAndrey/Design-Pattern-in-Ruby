@@ -4,27 +4,27 @@ describe Task do
   let(:task) { Task.new('run') }
 
   it 'has method get_time_required' do
-    expect(task.respond_to?(:get_time_required)).to be true
+    expect(task).to respond_to(:get_time_required)
   end
 
   it 'has method name' do
-    expect(task.respond_to?(:name)).to be true
+    expect(task).to respond_to(:name)
   end
 
   it 'has method name=' do
-    expect(task.respond_to?(:name=)).to be false
+    expect(task).not_to respond_to(:name=)
   end
 
   it 'has method parent' do
-    expect(task.respond_to?(:parent)).to be true
+    expect(task).to respond_to(:parent)
   end
 
   it 'has method parent' do
-    expect(task.respond_to?(:parent=)).to be true
+    expect(task).to respond_to(:parent=)
   end
 
   it 'has method total_num_of_tasks' do
-    expect(task.respond_to?(:total_num_of_tasks)).to be true
+    expect(task).to respond_to(:total_num_of_tasks)
   end
 
   it 'return name' do

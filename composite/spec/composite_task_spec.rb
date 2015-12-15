@@ -9,23 +9,23 @@ describe CompositeTask do
   let(:frost_task) { FrostTask.new }
 
   it 'has method add_sub_task' do
-    expect(composite.respond_to?(:add_sub_task)).to be true
+    expect(composite).to respond_to(:add_sub_task)
   end
 
   it 'has method remove_sub_task' do
-    expect(composite.respond_to?(:remove_sub_task)).to be true
+    expect(composite).to respond_to(:remove_sub_task)
   end
 
   it 'has method []' do
-    expect(composite.respond_to?(:[])).to be true
+    expect(composite).to respond_to(:[])
   end
 
   it 'has method []=' do
-    expect(composite.respond_to?(:[]=)).to be true
+    expect(composite).to respond_to(:[]=)
   end
 
   it 'has method <<' do
-    expect(composite.respond_to?(:<<)).to be true
+    expect(composite).to respond_to(:<<)
   end
 
   it 'return name' do

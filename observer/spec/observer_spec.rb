@@ -8,19 +8,19 @@ describe 'Observer' do
   let(:tax_man) { TaxMan.new }
   let(:payroll) { Payroll.new }
   it 'employee has method add_observer' do
-    expect(employee.respond_to?(:add_observer)).to be true
+    expect(employee).to respond_to(:add_observer)
   end
 
   it 'employee has method delete_observer' do
-    expect(employee.respond_to?(:delete_observer)).to be true
+    expect(employee).to respond_to(:delete_observer)
   end
 
   it 'employee has method notify_observers' do
-    expect(employee.respond_to?(:notify_observers)).to be true
+    expect(employee).to respond_to(:notify_observers)
   end
 
   it 'employee has method notify_observers' do
-    expect(employee.respond_to?(:count_observers)).to be true
+    expect(employee).to respond_to(:count_observers)
   end
 
   it 'nothing output via, when list of observers is empty' do

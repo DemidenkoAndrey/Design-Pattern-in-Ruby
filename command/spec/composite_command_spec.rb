@@ -10,7 +10,7 @@ describe CompositeCommand do
   let(:copy_file) { CopyFile.new('1.txt', '2.txt') }
 
   it 'has methods add_command' do
-    expect(commposite_command.respond_to?(:add_command)).to be true
+    expect(commposite_command).to respond_to(:add_command)
   end
 
   it 'init description is empty string' do
