@@ -204,3 +204,17 @@ Modifying instances or classes at run-time is advisable only when:
 - You understand the class you're modifying well and are sure your changes wont break things.
 
 If either of these points aren't true, it's probably better to create a separate adapter.
+
+***
+
+###[Proxy](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/proxy)
+
+######structural design pattern
+
+A proxy, in its most general form, is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate. In short, a proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes.
+
+Remote Proxy – Represents an object locally which belongs to a different address space. Think of an ATM implementation, it will hold proxy objects for bank information that exists in the remote server.
+
+Virtual Proxy – In place of a complex or heavy object, use a skeleton representation. When an underlying image is huge in size, just represent it using a virtual proxy object and on demand load the real object. You know that the real object is expensive in terms of instantiation and so without the real need we are not going to use the real object. Until the need arises we will use the virtual proxy.
+
+Protection Proxy – Are you working on an MNC? If so, we might be well aware of the proxy server that provides us internet by restricting access to some sort of websites like public e-mail, social networking, data storage etc. The management feels that, it is better to block some content and provide only work related web pages. Proxy server does that job. This is a type of proxy design pattern.
