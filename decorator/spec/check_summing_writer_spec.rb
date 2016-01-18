@@ -2,7 +2,7 @@ require_relative "../simple_writer"
 require_relative "../writer_decorator"
 require_relative "../check_summing_writer"
 
-describe WriterDecorator do
+describe CheckSummingWriter do
 
   let(:file_name) { "hello.txt" }
   let(:line) { "Hello, <3" }
