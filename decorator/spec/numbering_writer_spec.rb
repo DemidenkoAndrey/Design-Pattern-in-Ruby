@@ -29,7 +29,7 @@ describe WriterDecorator do
     expect(numbering_writer).to respond_to(:close)
   end
 
-  it 'has check_sum eq 0 after initialize' do
+  it 'has pos eq 0 after initialize' do
     expect(numbering_writer.pos).to eq 0
   end
 
@@ -40,7 +40,7 @@ describe WriterDecorator do
     expect(readline).to eq "1: #{line}\n"
   end
 
-  it 'pos eq 6 after write_line' do
+  it 'pos eq 14 after write_line' do
     expect { numbering_writer.write_line(line) }.to change { numbering_writer.pos }.from(0).to(14)
   end
 
