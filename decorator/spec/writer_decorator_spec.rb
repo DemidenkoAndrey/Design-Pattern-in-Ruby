@@ -28,7 +28,7 @@ describe WriterDecorator do
     expect(writer_decorator).to respond_to(:close)
   end
 
-  it 'has check_sum eq 0 after initialize' do
+  it 'has pos eq 0 after initialize' do
     expect(writer_decorator.pos).to eq 0
   end
 
