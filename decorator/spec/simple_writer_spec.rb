@@ -1,5 +1,5 @@
 require_relative "../simple_writer"
-require 'timecop'
+
 describe SimpleWriter do
 
   let(:file_name) { "hello.txt" }
