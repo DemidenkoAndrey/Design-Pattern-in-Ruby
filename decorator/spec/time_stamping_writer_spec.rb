@@ -1,7 +1,7 @@
 require_relative "../simple_writer"
 require_relative "../writer_decorator"
 require_relative "../time_stamping_writer"
-
+require 'timecop'
 describe WriterDecorator do
 
   let(:file_name) { "hello.txt" }
