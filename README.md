@@ -218,3 +218,29 @@ Remote Proxy – Represents an object locally which belongs to a different addre
 Virtual Proxy – In place of a complex or heavy object, use a skeleton representation. When an underlying image is huge in size, just represent it using a virtual proxy object and on demand load the real object. You know that the real object is expensive in terms of instantiation and so without the real need we are not going to use the real object. Until the need arises we will use the virtual proxy.
 
 Protection Proxy – Are you working on an MNC? If so, we might be well aware of the proxy server that provides us internet by restricting access to some sort of websites like public e-mail, social networking, data storage etc. The management feels that, it is better to block some content and provide only work related web pages. Proxy server does that job. This is a type of proxy design pattern.
+
+***
+
+###[Decorator](https://github.com/DemidenkoAndrey/Design-Pattern-in-Ruby/tree/master/decorator)
+
+######structural design pattern
+
+The Decorator pattern is a straightforward technique that you can use to assemble
+exactly the functionality that you need at runtime. It offers an alternative to creating
+a monolithic “kitchen sink” object that supports every possible feature or a whole forest
+of classes and subclasses to cover every possible combination of features. Instead, with
+the Decorator pattern, you create one class that covers the basic functionality and a set
+of decorators to go with it. Each decorator supports the same core interface, but adds
+its own twist on that interface. The key implementation idea of the Decorator pattern
+is that the decorators are essentially shells: Each takes in a method call, adds its own
+special twist, and passes the call on to the next component in line. That next component
+may be another decorator, which adds yet another twist, or it may be the final,
+real object, which actually completes the basic request.
+
+The Decorator pattern lets you start with some basic functionality and layer on
+extra features, one decorator at a time. Because the Decorator pattern builds these layers
+at runtime, you are free to construct whatever combination you need, at runtime.
+
+With Ruby, the easiest way to use the decorator pattern is to create a module for each decorator. The decorators that you want to use can be dynamically added to an instance using extend.
+
+Ruby includes a [forwardable](http://ruby-doc.org/stdlib/libdoc/forwardable/rdoc/Forwardable.html) module that provides an easy way to add delegation methods. `forwardable` may allow you to create cleaner more readable code, it really depends on the situation.
